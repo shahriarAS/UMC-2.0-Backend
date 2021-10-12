@@ -22,12 +22,14 @@ const pdfView = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
     }
 }
+
+// All PDF By Course
 
 // PDF View Enrolled
 const pdfViewEnrolled = async (req, res) => {
@@ -46,7 +48,7 @@ const pdfViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -66,7 +68,7 @@ const pdfCreate = async (req, res) => {
             msg: "Successfully Created A PDF"
         });
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -89,7 +91,7 @@ const pdfUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -112,7 +114,7 @@ const pdfDelete = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

@@ -11,6 +11,10 @@ const classSchema = mongoose.Schema({
         type: Number,
         required: true
     },
+    classCaption: {
+        type: String,
+        required: false
+    },
     videoLink: {
         type: String,
         required: true,

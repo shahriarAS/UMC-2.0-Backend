@@ -21,7 +21,7 @@ const classViewIndividual = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -40,7 +40,7 @@ const classCreate = async (req, res) => {
             msg: "Successfully Created A Class"
         });
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -63,7 +63,7 @@ const classUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -86,7 +86,7 @@ const classDelete = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

@@ -21,7 +21,7 @@ const orderViewAll = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -44,7 +44,7 @@ const orderViewIndividual = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -60,7 +60,7 @@ const orderCreate = async (req, res) => {
             msg: "Successfully Created A order"
         });
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -118,7 +118,7 @@ const orderUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -141,7 +141,7 @@ const orderDelete = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
