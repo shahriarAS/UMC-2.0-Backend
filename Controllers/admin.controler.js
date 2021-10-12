@@ -22,7 +22,7 @@ const adminView = async (req, res) => {
             })
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -55,7 +55,7 @@ const adminSignUp = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -64,7 +64,7 @@ const adminSignUp = async (req, res) => {
 
 // Admin Login
 const adminLogin = async (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
     try {
         const existAdmin = await userModel.findOne({ $or: [{ username: req.body.usernameOrEmailOrPhone }, { email: req.body.usernameOrEmailOrPhone }, { phone: req.body.phone }], verified: true, active: true, role: "admin" })
         if (existAdmin) {
@@ -93,7 +93,7 @@ const adminLogin = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -116,7 +116,7 @@ const adminEmailVerify = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -139,7 +139,7 @@ const adminUpdate = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -174,7 +174,7 @@ const adminPassChange = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -199,7 +199,7 @@ const adminForgotPassword = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -229,7 +229,7 @@ const adminResetPassword = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -259,7 +259,7 @@ const adminDelete = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

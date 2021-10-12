@@ -19,7 +19,7 @@ const partViewIndividual = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -36,7 +36,7 @@ const partCreate = async (req, res) => {
             msg: "Successfully Created A Part"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -59,7 +59,7 @@ const partUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -82,7 +82,7 @@ const partDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

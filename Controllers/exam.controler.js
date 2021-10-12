@@ -22,7 +22,7 @@ const examViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -42,7 +42,7 @@ const examCreate = async (req, res) => {
             msg: "Successfully Created A Exam"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -65,7 +65,7 @@ const examUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -88,7 +88,7 @@ const examDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

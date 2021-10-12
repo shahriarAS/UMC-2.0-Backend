@@ -22,7 +22,7 @@ const scheduleView = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -46,7 +46,7 @@ const scheduleViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -66,7 +66,7 @@ const scheduleCreate = async (req, res) => {
             msg: "Successfully Created A Schedule"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -89,7 +89,7 @@ const scheduleUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -112,7 +112,7 @@ const scheduleDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

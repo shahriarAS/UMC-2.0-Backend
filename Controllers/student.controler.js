@@ -25,7 +25,7 @@ const studentView = async (req, res) => {
             })
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -58,7 +58,7 @@ const studentSignUp = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -67,7 +67,7 @@ const studentSignUp = async (req, res) => {
 
 // Student Login
 const studentLogin = async (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
     try {
         const existStudent = await userModel.findOne({ $or: [{ username: req.body.usernameOrEmailOrPhone }, { email: req.body.usernameOrEmailOrPhone }, { phone: req.body.phone }], verified: true, active: true, role: "student" })
         if (existStudent) {
@@ -96,7 +96,7 @@ const studentLogin = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -127,7 +127,7 @@ const studentEmailVerify = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -150,7 +150,7 @@ const studentUpdate = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -186,7 +186,7 @@ const studentPassChange = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -211,7 +211,7 @@ const studentForgotPassword = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -220,7 +220,7 @@ const studentForgotPassword = async (req, res) => {
 
 // Student Valid Randing Check
 const studentRandStringCheck = async (req, res) => {
-    // console.log(req.params)
+    console.log(req.params)
     try {
         const { randString } = req.params
         const existStudent = await userModel.findOne({ randString: randString, role: "student" })
@@ -235,7 +235,7 @@ const studentRandStringCheck = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -245,11 +245,11 @@ const studentRandStringCheck = async (req, res) => {
 
 // Student Reset Password
 const studentResetPassword = async (req, res) => {
-    // console.log(req.params)
+    console.log(req.params)
     try {
         const { randString } = req.params
         const existStudent = await userModel.findOne({ randString: randString, role: "student" })
-        // console.log(req.body)
+        console.log(req.body)
         if (existStudent) {
             const hashedPass = await bcrypt.hash(req.body.newPassword, 5)
             await userModel.updateOne({ randString: randString, role: "student" }, {
@@ -269,7 +269,7 @@ const studentResetPassword = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -300,7 +300,7 @@ const studentDelete = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
