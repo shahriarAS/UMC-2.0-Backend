@@ -27,12 +27,10 @@ const courseSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    features: [
-        {
-            type: String,
-            required: true
-        }
-    ],
+    features: {
+        type: String,
+        required: true
+    },
     published: {
         type: Boolean,
         default: true
