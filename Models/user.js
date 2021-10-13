@@ -47,7 +47,7 @@ const userSchema = mongoose.Schema({
         index: true,
     },
     phone: {
-        type: Number,
+        type: String,
         required: true,
         unique: true,
         dropDups: true,
@@ -62,7 +62,7 @@ const userSchema = mongoose.Schema({
         enum: ["O+", "O-", "A+", "A-", "B+", "B-", "AB+", "AB-"],
     },
     fatherPhone: {
-        type: Number,
+        type: String,
         required: true,
     },
     fatherOccupation: {
@@ -70,7 +70,7 @@ const userSchema = mongoose.Schema({
         required: true,
     },
     motherPhone: {
-        type: Number,
+        type: String,
         required: true,
     },
     motherOccupation: {
