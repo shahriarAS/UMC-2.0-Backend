@@ -15,7 +15,7 @@ const adminRoute = express.Router()
 adminRoute.get("/view", verifyAdminMiddleware, adminView)
 
 // Admin Sign Up
-adminRoute.post("/signup", adminSignUp)
+// adminRoute.post("/signup", adminSignUp)
 
 // Admin Login
 adminRoute.post("/login", adminLogin)
