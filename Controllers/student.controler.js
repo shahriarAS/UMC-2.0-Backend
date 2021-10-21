@@ -50,7 +50,7 @@ const studentSignUp = async (req, res) => {
             await userModel.updateOne({ role: "admin" }, { $push: { notifications: { text: `${req.body.usernameOrEmailOrPhone} has registered.`, status: "unread" } } })
             sendEmail(req.body.email, randString, req.body.username, "signup", "student")
             res.status(200).json({
-                msg: "Successfully Registered As A Student. Please Check Your Email"
+                msg: "Successfully Registered As A Student. Please Check Your Email. Also please check your spam box. "
             });
         } else {
             res.status(401).json({
@@ -69,7 +69,7 @@ const studentSignUp = async (req, res) => {
 const studentLogin = async (req, res) => {
     console.log(req.body)
     try {
-        const existStudent = await userModel.findOne({ $or: [{ username: req.body.usernameOrEmailOrPhone }, { email: req.body.usernameOrEmailOrPhone }, { phone: req.body.phone }], verified: true, active: true, role: "student" })
+        const existStudent = await userModel.findOne({ $or: [{ username: req.body.usernameOrEmailOrPhone }, { email: req.body.usernameOrEmailOrPhone }, { phone: req.body.usernameOrEmailOrPhone }], verified: true, active: true, role: "student" })
         if (existStudent) {
             const isValidPass = await bcrypt.compare(req.body.password, existStudent.password)
             if (isValidPass) {
@@ -202,7 +202,7 @@ const studentForgotPassword = async (req, res) => {
             await userModel.updateOne({ _id: existStudent._id, role: "student" }, { $set: { randString: randString } })
             sendEmail(existStudent.email, randString, existStudent.username, "resetPass", "student")
             res.status(200).json({
-                msg: "Pleace Check Your Email For Details."
+                msg: "Pleace Check Your Email For Details. Also check your spam box."
             });
 
         } else {
