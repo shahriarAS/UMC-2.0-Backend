@@ -15,7 +15,7 @@ const orderSchema = mongoose.Schema({
     },
     payment_method: {
         type: String,
-        enum: ["bkash", "nogod", "rocket", "UMC Office"],
+        enum: ["bkash", "nagad", "rocket", "UMC Office"],
         required: true
     },
     transaction_id: {
