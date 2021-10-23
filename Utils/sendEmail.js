@@ -68,14 +68,14 @@ const sendMail = async (email, randString, username, verifyFor, role) => {
 
     transport.sendMail(mailOptions, function (err, resp) {
       if (err) {
-        console.log(err)
+        // console.log(err)
       } else {
-        console.log("Message Sent", resp)
+        // console.log("Message Sent", resp)
       }
     })
   }
   catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 

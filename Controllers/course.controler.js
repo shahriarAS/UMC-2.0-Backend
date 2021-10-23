@@ -30,7 +30,7 @@ const courseViewAll = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -68,7 +68,7 @@ const courseViewIndividual = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -93,7 +93,7 @@ const courseEnroll = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -118,7 +118,7 @@ const courseViewEnrolled = async (req, res) => {
             }
         })
         if (existCourse) {
-            console.log("Watching")
+            // console.log("Watching")
             res.status(200).json({
                 result: existCourse,
                 msg: "You are watching enrolled course"
@@ -130,7 +130,7 @@ const courseViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -147,7 +147,7 @@ const courseCreate = async (req, res) => {
             msg: "Successfully Created A Course"
         });
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -170,7 +170,7 @@ const courseUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -193,7 +193,7 @@ const courseDelete = async (req, res) => {
         }
 
     } catch (err) {
-        console.log(err)
+        // console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
