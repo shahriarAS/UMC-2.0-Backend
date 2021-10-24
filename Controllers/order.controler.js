@@ -57,18 +57,17 @@ const orderViewIndividual = async (req, res) => {
 const orderCreate = async (req, res) => {
   try {
     const isAlreadyPaid = await passCodeModel.findOne({
-      code: req.body.transaction_id
+      code: req.body.transaction_id,
+    });
+    const existCourse = await courseModel.findOne({
+      _id: req.body.course,
     });
     if (isAlreadyPaid) {
-
       const neworder = new orderModel({
         ...req.body,
         order_status: "approved",
       });
       await neworder.save();
-      const existCourse = await courseModel.findOne({
-        _id: req.body.course,
-      });
       await courseModel.updateMany(
         { _id: req.body.course },
         {
@@ -89,6 +88,31 @@ const orderCreate = async (req, res) => {
         }
       );
       await passCodeModel.deleteOne({ code: req.body.transaction_id });
+    } else if (existCourse.price == "0") {
+      const neworder = new orderModel({
+        ...req.body,
+        order_status: "approved",
+      });
+      await neworder.save();
+      await courseModel.updateMany(
+        { _id: req.body.course },
+        {
+          $push: { enrolledStudent: req.body.student },
+          $set: { enrolledCount: existCourse.enrolledCount + 1 },
+        }
+      );
+      await userModel.updateOne(
+        { _id: req.body.student, role: "student" },
+        {
+          $push: {
+            enrolledCourse: existCourse._id,
+            notifications: {
+              text: "You have successfully enrolled a course.",
+              status: "unread",
+            },
+          },
+        }
+      );
     } else {
       const neworder = new orderModel(req.body);
       await neworder.save();
