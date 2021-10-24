@@ -49,6 +49,7 @@ const courseViewIndividual = async (req, res) => {
                     title: existCourse.title,
                     courseNumber: existCourse.courseNumber,
                     courseDetails: existCourse.courseDetails,
+                    thumbnail: existCourse.thumbnail,
                     trailer: existCourse.trailer,
                     price: existCourse.price,
                     features: existCourse.features,
