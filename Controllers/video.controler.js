@@ -1,9 +1,9 @@
 // Internal Import
-import videoModel from "../Models/video.js"
-import classModel from "../Models/class.js"
 import chapterModel from "../Models/chapter.js"
-import partModel from "../Models/part.js"
+import classModel from "../Models/class.js"
 import courseModel from "../Models/course.js"
+import partModel from "../Models/part.js"
+import videoModel from "../Models/video.js"
 
 const videoView = async (req, res) => {
     try {
@@ -21,7 +21,7 @@ const videoView = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -45,7 +45,7 @@ const videoViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -65,7 +65,7 @@ const videoCreate = async (req, res) => {
             msg: "Successfully Created A Video"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -88,7 +88,7 @@ const videoUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -111,7 +111,7 @@ const videoDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

@@ -1,10 +1,8 @@
 // Internal Import
-import orderModel from "../Models/order.js";
-import chapterModel from "../Models/chapter.js";
-import partModel from "../Models/part.js";
 import courseModel from "../Models/course.js";
-import userModel from "../Models/user.js";
+import orderModel from "../Models/order.js";
 import passCodeModel from "../Models/passCodeModel.js";
+import userModel from "../Models/user.js";
 
 // order View All
 const orderViewAll = async (req, res) => {
@@ -24,7 +22,7 @@ const orderViewAll = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -46,7 +44,7 @@ const orderViewIndividual = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -121,7 +119,7 @@ const orderCreate = async (req, res) => {
       msg: "Successfully Created A order",
     });
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -202,7 +200,7 @@ const orderUpdate = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -224,7 +222,7 @@ const orderDelete = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -233,9 +231,10 @@ const orderDelete = async (req, res) => {
 
 // Export
 export {
-  orderViewAll,
-  orderViewIndividual,
-  orderCreate,
-  orderUpdate,
-  orderDelete,
+    orderViewAll,
+    orderViewIndividual,
+    orderCreate,
+    orderUpdate,
+    orderDelete,
 };
+

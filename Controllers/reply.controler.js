@@ -1,6 +1,6 @@
 // Internal Import
-import replyModel from "../Models/reply.js"
 import commentModel from "../Models/comment.js"
+import replyModel from "../Models/reply.js"
 import userModel from "../Models/user.js"
 
 // Reply Create
@@ -14,7 +14,7 @@ const replyCreate = async (req, res) => {
             msg: "Successfully Created A Reply"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -37,7 +37,7 @@ const replyUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -60,7 +60,7 @@ const replyDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

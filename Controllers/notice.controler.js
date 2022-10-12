@@ -1,9 +1,9 @@
 // Internal Import
-import noticeModel from "../Models/notice.js"
-import classModel from "../Models/class.js"
 import chapterModel from "../Models/chapter.js"
-import partModel from "../Models/part.js"
+import classModel from "../Models/class.js"
 import courseModel from "../Models/course.js"
+import noticeModel from "../Models/notice.js"
+import partModel from "../Models/part.js"
 
 // Notice View
 const noticeView = async (req, res) => {
@@ -22,7 +22,7 @@ const noticeView = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -46,7 +46,7 @@ const noticeViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -66,7 +66,7 @@ const noticeCreate = async (req, res) => {
             msg: "Successfully Created A Notice"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -89,7 +89,7 @@ const noticeUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -112,7 +112,7 @@ const noticeDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

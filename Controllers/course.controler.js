@@ -1,6 +1,5 @@
 // Internal Import
 import courseModel from "../Models/course.js"
-import partModel from "../Models/part.js"
 import userModel from "../Models/user.js"
 
 
@@ -30,7 +29,7 @@ const courseViewAll = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -69,7 +68,7 @@ const courseViewIndividual = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -94,7 +93,7 @@ const courseEnroll = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -131,7 +130,7 @@ const courseViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -148,7 +147,7 @@ const courseCreate = async (req, res) => {
             msg: "Successfully Created A Course"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -171,7 +170,7 @@ const courseUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -194,7 +193,7 @@ const courseDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

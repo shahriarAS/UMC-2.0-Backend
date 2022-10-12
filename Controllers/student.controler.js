@@ -1,14 +1,11 @@
 // External Import
-import express from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import axios from "axios";
-import fs from "fs";
-
 // Internal Import
 import userModel from "../Models/user.js";
-import uniqueString from "../Utils/uniqueString.js";
 import sendEmail from "../Utils/sendEmail.js";
+import uniqueString from "../Utils/uniqueString.js";
+
 
 // Student View
 const studentView = async (req, res) => {
@@ -29,7 +26,7 @@ const studentView = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -92,7 +89,7 @@ const studentSignUp = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -156,7 +153,7 @@ const studentLogin = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -220,7 +217,7 @@ const studentEmailVerify = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -265,7 +262,7 @@ const studentUpdate = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -319,7 +316,7 @@ const studentPassChange = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -355,7 +352,7 @@ const studentForgotPassword = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -381,7 +378,7 @@ const studentRandStringCheck = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -429,7 +426,7 @@ const studentResetPassword = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });
@@ -475,7 +472,7 @@ const studentDelete = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err)
+    console.log(err)
     res.status(500).json({
       msg: "Server Error",
     });

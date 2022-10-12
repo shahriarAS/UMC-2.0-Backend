@@ -1,12 +1,11 @@
 // External Import
-import express from "express"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
-
 // Internal Import
 import userModel from "../Models/user.js"
-import uniqueString from "../Utils/uniqueString.js"
 import sendEmail from "../Utils/sendEmail.js"
+import uniqueString from "../Utils/uniqueString.js"
+
 
 // Admin View
 const adminView = async (req, res) => {
@@ -22,7 +21,7 @@ const adminView = async (req, res) => {
             })
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -55,7 +54,7 @@ const adminSignUp = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -93,7 +92,7 @@ const adminLogin = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -116,7 +115,7 @@ const adminEmailVerify = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -139,7 +138,7 @@ const adminUpdate = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -174,7 +173,7 @@ const adminPassChange = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -199,7 +198,7 @@ const adminForgotPassword = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -229,7 +228,7 @@ const adminResetPassword = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -259,7 +258,7 @@ const adminDelete = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

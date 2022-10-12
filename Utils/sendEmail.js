@@ -1,16 +1,21 @@
-import nodemailer from "nodemailer"
+import dotenv from "dotenv"
 import { google } from "googleapis"
+import nodemailer from "nodemailer"
 import emailFormat from "./emailFormat.js"
+
+dotenv.config()
 
 // These id's and secrets should come from .env file.
 const CLIENT_ID = process.env.CLIENT_ID
-const CLEINT_SECRET = process.env.CLEINT_SECRET
+const CLIENT_SECRET = process.env.CLIENT_SECRET
 const REDIRECT_URI = process.env.REDIRECT_URI
 const REFRESH_TOKEN = process.env.REFRESH_TOKEN
 
+console.log(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, REFRESH_TOKEN)
+
 const oAuth2Client = new google.auth.OAuth2(
   CLIENT_ID,
-  CLEINT_SECRET,
+  CLIENT_SECRET,
   REDIRECT_URI
 );
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
@@ -24,7 +29,7 @@ const sendMail = async (email, randString, username, verifyFor, role) => {
         type: 'OAuth2',
         user: 'umcdev9@gmail.com',
         clientId: CLIENT_ID,
-        clientSecret: CLEINT_SECRET,
+        clientSecret: CLIENT_SECRET,
         refreshToken: REFRESH_TOKEN,
         accessToken: accessToken,
       }
@@ -68,14 +73,14 @@ const sendMail = async (email, randString, username, verifyFor, role) => {
 
     transport.sendMail(mailOptions, function (err, resp) {
       if (err) {
-        // console.log(err)
+        console.log(err)
       } else {
         // console.log("Message Sent", resp)
       }
     })
   }
   catch (err) {
-    // console.log(err)
+    console.log(err)
   }
 }
 

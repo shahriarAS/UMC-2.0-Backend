@@ -1,9 +1,9 @@
 // Internal Import
-import scheduleModel from "../Models/schedule.js"
-import classModel from "../Models/class.js"
 import chapterModel from "../Models/chapter.js"
-import partModel from "../Models/part.js"
+import classModel from "../Models/class.js"
 import courseModel from "../Models/course.js"
+import partModel from "../Models/part.js"
+import scheduleModel from "../Models/schedule.js"
 
 // Schedule View
 const scheduleView = async (req, res) => {
@@ -22,7 +22,7 @@ const scheduleView = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -46,7 +46,7 @@ const scheduleViewEnrolled = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -66,7 +66,7 @@ const scheduleCreate = async (req, res) => {
             msg: "Successfully Created A Schedule"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -89,7 +89,7 @@ const scheduleUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -112,7 +112,7 @@ const scheduleDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

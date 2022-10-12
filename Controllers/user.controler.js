@@ -1,9 +1,7 @@
 // External Import
-import express from "express"
-import bcrypt from "bcrypt"
-
 // Internal Import
 import userModel from "../Models/user.js"
+
 
 // All User View
 const allUserView = async (req, res) => {
@@ -16,7 +14,7 @@ const allUserView = async (req, res) => {
             })
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -38,7 +36,7 @@ const userView = async (req, res) => {
             })
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -62,7 +60,7 @@ const userUpdate = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -86,7 +84,7 @@ const userDelete = async (req, res) => {
             });
         }
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

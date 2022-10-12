@@ -1,7 +1,7 @@
 // Internal Import
 import chapterModel from "../Models/chapter.js"
-import partModel from "../Models/part.js"
 import courseModel from "../Models/course.js"
+import partModel from "../Models/part.js"
 
 // Chapter View Individual
 const chapterViewIndividual = async (req, res) => {
@@ -20,7 +20,7 @@ const chapterViewIndividual = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -38,7 +38,7 @@ const chapterCreate = async (req, res) => {
             msg: "Successfully Created A Chapter"
         });
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -61,7 +61,7 @@ const chapterUpdate = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });
@@ -84,7 +84,7 @@ const chapterDelete = async (req, res) => {
         }
 
     } catch (err) {
-        // console.log(err)
+        console.log(err)
         res.status(500).json({
             msg: "Server Error"
         });

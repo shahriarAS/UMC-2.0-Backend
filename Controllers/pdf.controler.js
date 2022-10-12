@@ -1,9 +1,9 @@
 // Internal Import
-import pdfModel from "../Models/pdf.js";
-import classModel from "../Models/class.js";
 import chapterModel from "../Models/chapter.js";
-import partModel from "../Models/part.js";
+import classModel from "../Models/class.js";
 import courseModel from "../Models/course.js";
+import partModel from "../Models/part.js";
+import pdfModel from "../Models/pdf.js";
 
 // All PDF By Course
 const allPDFView = async (req, res) => {
@@ -20,7 +20,7 @@ const allPDFView = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -46,7 +46,7 @@ const pdfView = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -72,7 +72,7 @@ const pdfViewEnrolled = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -104,7 +104,7 @@ const pdfCreate = async (req, res) => {
       msg: "Successfully Created A PDF",
     });
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -129,7 +129,7 @@ const pdfUpdate = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -151,7 +151,7 @@ const pdfDelete = async (req, res) => {
       });
     }
   } catch (err) {
-    // console.log(err);
+    console.log(err);
     res.status(500).json({
       msg: "Server Error",
     });
@@ -160,10 +160,11 @@ const pdfDelete = async (req, res) => {
 
 // Export
 export {
-  allPDFView,
-  pdfView,
-  pdfViewEnrolled,
-  pdfCreate,
-  pdfUpdate,
-  pdfDelete,
+    allPDFView,
+    pdfView,
+    pdfViewEnrolled,
+    pdfCreate,
+    pdfUpdate,
+    pdfDelete,
 };
+
